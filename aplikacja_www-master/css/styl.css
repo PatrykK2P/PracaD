@@ -1,0 +1,134 @@
+html, body {
+	/* określa przerwe np. między słowami w tekscie */
+	margin: 0 !important;
+	/* tworzy przestrzeń między głównym tekstem, a obramowaniem strony */
+	padding: 0 !important;
+}
+
+#main {
+	/* ustawia siatkę na elemencie */
+	display: grid;
+	grid-template-columns: 25vw auto 25vw;
+	grid-template-rows: 15vh 10vh 65vh 10vh;
+}
+
+#logo {
+	/* "background" przedstawia wygląd tła */
+	background: green;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 1;
+	/* tworzy ilość kolumn */
+	grid-column: 1;
+}
+
+#title {
+	/* "background" przedstawia wygląd tła */
+	background: yellow;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 1;
+	/* tworzy ilość kolumn */
+	grid-column: 2;
+}
+
+#login {
+	/* "background" przedstawia wygląd tła */
+	background: orange;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 1;
+	/* tworzy ilość kolumn */
+	grid-column: 3;
+}
+
+#nav {
+	/* "background" przedstawia wygląd tła */
+	background: red;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 2;
+	/* tworzy ilość kolumn */
+	grid-column: 1 / 4;
+}
+
+#submenu {
+	/* "background" przedstawia wygląd tła */
+	background: blue;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 3;
+	/* tworzy ilość kolumn */
+	grid-column: 1;
+}
+
+#content {
+	/* "background" przedstawia wygląd tła */
+	background: gray;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 3;
+	/* tworzy ilość kolumn */
+	grid-column: 2;
+	/* zaczyna element od kolejnej linii zajmując przy tym całą możliwą szerokość */
+	display: block;
+	/* gdy "content" się przepełni to automatycznie doda przewijanie listy */
+	overflow-y: auto;
+	grid-template-columns: repeat(3, 1fr);
+}
+#col1 {
+	/* tworzy ilość kolumn */
+	grid-column: 1;
+}
+
+#col2 {
+	/* tworzy ilość kolumn */
+	grid-column: 2;
+}
+
+#foot {
+	/* "background" przedstawia wygląd tła */
+	background: lightgray;
+	/* tworzy ilość rzędów jaka ma być */
+	grid-row: 4;
+	/* tworzy ilość kolumn */
+	grid-column: 1 / 4;
+}
+
+.button {
+	/* określa metodę pozycjonowania elementu */
+	position: relative;
+	/* określa kolejność elementu */
+	z-index: 1;
+	/* "text-align" ustawia jak ma być ustawiony tekst */
+	text-align: center;
+	/* dodaje obramowanie w danym kolorze/rozmiarze danego elementu */
+	border: solid yellow 1px;
+}
+
+.button::before {
+	content: '';
+	/* określa metodę pozycjonowania elementu */
+	position: absolute;
+	top: 0;
+	left: 0;
+	/* width przedstawia szerokość elementu */
+	width: 100%;
+	/* height przedstawia wysokość elementu */
+	height: 100%;
+	/* określa kolejność elementu */
+	z-index: -1;
+	/* "background" przedstawia wygląd tła */
+	background: gray;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+
+.button:hover::before{
+	/* ustala przezroczystość elementu jakim jest tutaj "button" */
+	opacity: 0.6;
+}
+
+figure.galeria img {
+	/* width przedstawia szerokość elementu */
+	width: 100%;
+	/* height przedstawia wysokość elementu */
+	height: auto;
+}

@@ -1,0 +1,29 @@
+<!--<form method="post" action="./php/main.php">-->
+<div id="form">
+	<style>
+		input[name="name"] {
+			border-color: orange;
+		}
+	</style>
+	<!-- Pola tekstowe gdzie są wpisywane dane, które później będą zapisywane w bazie danych -->
+	<!-- "placeholder" określa oczekiwane dane, które użytkownik ma wpisać -->
+	<p><input type="text" name="name" placeholder="Podaj swoje imię"/></p>
+	<p><input type="text" name="lastname" placeholder="Podaj swoje nazwisko"/></p>
+	<p><input type="email" name="email" placeholder="Podaj swój email"/></p>
+	<p><textarea name="content" placeholder="Wpisz treść"></textarea></p>
+	<!-- fieldset jest to obszar, który zajmuje dany fragment strony, w którym można między innymi dać możliwości wyboru -->
+	<fieldset>
+		<legend>Twoja płeć</legend>
+			<!-- Możliwość wyboru płci na stronie spośród 3 możliwych opcji -->
+		<p><input type="radio" name="sex" value="k"/><span>Kobieta</span></p>
+		<p><input type="radio" name="sex" value="m"/><span>Mężczyzna</span></p>
+		<p><input type="radio" name="sex" value="n" checked="checked"/><span>Nieokreślona</span></p>
+	</fieldset>
+	<!-- Dzięki połączeniu z "main.js" przycisk ten po kliknięciu zapisuje dane wpisane wcześniej w bazie danych -->
+	<button>Wyślij zapytanie</button>
+</div>
+<div id="output">
+
+</div>
+
+<!--</form>-->
